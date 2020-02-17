@@ -1,0 +1,21 @@
+import Dataset
+import Classification
+
+if (__name__ == "__main__"):
+  c = Classification()
+
+  for line in sys.stdin:
+    flds = line.split('|')
+    d = Dataset()
+	d.objNumber = flds[0]
+	d.objDate = flds[1]
+	d.classification = flds[2]
+	d.objStartDate = flds[3]
+	d.objEndDate = flds[4]
+
+    c.count(o)
+	
+  print(c)
+
+	
+	

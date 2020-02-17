@@ -1,0 +1,34 @@
+import re
+
+class Dataset ():
+  def __init__(self):
+    self.objNumber = ''
+    self.objDate = ''
+    self.classification = ''
+    self.objStartDate = 0
+    self.objEndDate = 0
+
+  def __str__():
+    return objNumber + '|' + objDate + '|' + classification + '|' + objStartDate + '|' + objEndDate
+ 
+  def filter() :
+    if (re.match(r'^\d+\.\d+\.\d+$', self.objNumber)):
+	  return self
+    else:
+      return None
+  
+  def dateTranslate():
+    if (re.match('^ca\. ', self.objDate)):
+      self.objEndDate = int(self.objDate[4:])
+      self.objStartDate = self.objEndDate - 3
+    elif (re.match('-', self.objDate)):
+      self.objStartDate = int(self.objDate[:3])
+      endDate = int(re.search(r' *- *(\d+)$', self.objStartDate))
+
+      if (endDate < 100):
+        self.objEndDate = self.objStartDate // 100 + endDate
+      else:
+        self.objEndDate = endDate
+    else:
+      self.objStartDate = int(self.objDate)
+      self.objEndDate = self.objStartDate

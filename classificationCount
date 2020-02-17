@@ -1,0 +1,7 @@
+CREATE TABLE classificationCount (
+   clssification varchar(32),
+   count         int
+);
+
+create index i1 on clasificationCount (classification);
+create index i2 on classificationCount (count);

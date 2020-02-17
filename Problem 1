@@ -1,0 +1,14 @@
+import Dataset
+
+if (__name__ == "__main__"):
+  for line in sys.stdin:
+    flds = line.split('|')
+    d = Dataset()
+	d.objNumber = flds[0]
+	d.objDate = flds[1]
+	d.classification = flds[2]
+
+	d.filter()
+
+	print(d)
+	

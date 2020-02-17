@@ -1,0 +1,15 @@
+import Dataset
+
+class Clasification():
+  def __init__(self):
+    self.classificationCount = {}
+
+  def count(d):
+    if (d.classification in self.classificationCount):
+      self.classificationCount(d.classification) += 1
+	else:
+      self.classificationCount(d.classification) = 1
+
+  def __str__():
+    for i in classificationCount.keys():
+	  print(i + ": " + classificationCount(i))
